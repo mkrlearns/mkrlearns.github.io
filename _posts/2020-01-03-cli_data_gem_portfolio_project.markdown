@@ -6,15 +6,15 @@ permalink:  cli_data_gem_portfolio_project
 ---
 
 
-This one I was quite a bit of a challenge. It took quite some time to land on an idea that both interested me and could fulfill the requirements of the project.
+This one was quite the challenge. It took quite some time to land on an idea that both interested me and could fulfill the requirements of the project.
 
-Initially I wanted to create something that would be able to convert CSS color codes, but while searching for sites to scrape for that project I stumbled upon a deep learning color palette generator (http://colormind.io/). I couldn't help but use this in my project.
+Initially I wanted to create something that would be able to convert between CSS color codes, but while searching for sites to scrape for that project I stumbled upon a deep learning color palette generator (http://colormind.io/). I couldn't help but use this in my project.
 
 Colormind when provided with between one and four colors will use deep learning to return the remainder of a five color palette. 
 
 ### Connecting to the API
 
-Connecting to the colormind API was easy enough. Using their API instructions and using [Curl to Ruby](https://jhawthorn.github.io/curl-to-ruby/) in order to convert the curl commands to Ruby's net/http made it a breeze.
+Connecting to the colormind API was easy enough. Using their API instructions and [Curl to Ruby](https://jhawthorn.github.io/curl-to-ruby/) to convert the curl commands into net/http made it a breeze.
 
 The API only accepted RGB values and in a certain format, so the challenge here was converting other color codes over to RGB and then modifying the values returned to an array the API expected.
 
@@ -22,13 +22,13 @@ The API only accepted RGB values and in a certain format, so the challenge here 
 
 In order to convert the color codes provided to RGB I ended back on the original Idea for this project, converting CSS color codes. To do this I decided to scrape the site http://convertingcolors.com/. I could have used their provided API as well, but I felt that scraping the site would be more appropriate for this project's requirements.
 
-convertingcolors.com has a very useful structure to their URLs:
+convertingcolors.com has a very useful structure to their URLs, essentially providing the color codes within them:
 
 * https://convertingcolors.com/hex-color-6EC3B1.html
 * https://convertingcolors.com/rgb-color-110_195_177.html
 * https://convertingcolors.com/hsl-color-167_41_60.html
 
-Essentially providing the color codes in the URLs. This way I could take the user's input and modify the strings a bit to grab the page I needed. With a bit of scraping I had not only the RGB required for colormind's API, but essentially an added feature: converting between any HEX, RGB, and HSL color.
+This way I could take the user's input and modify the strings a bit to grab the page I needed. With a bit of scraping I had not only the RGB required for colormind's API, but essentially an added feature: converting between any HEX, RGB, and HSL color.
 
 ### User Experience
 
