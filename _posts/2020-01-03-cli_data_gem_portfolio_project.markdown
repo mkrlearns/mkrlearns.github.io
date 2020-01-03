@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "CLI Data Gem Portfolio Project"
-date:       2020-01-03 15:53:26 +0000
+date:       2020-01-03 10:53:27 -0500
 permalink:  cli_data_gem_portfolio_project
 ---
 
@@ -44,15 +44,15 @@ I found Rainbow to be easier to work with than Colorize (used in the previous sc
 
 Since there are multiple ways to represent color codes, I tried to account for every exception.
 
-* Hex codes can be represented with a # or without and also as six characters or just six.
+* Hex codes can be represented with a # or without and also as six characters or just three.
 * HSL codes can contain percent and degree symbols or not.
 
-With some string manipulation I was able to account for each of these cases.
+With some fancy string manipulation and tests I was able to account for each of these cases.
 
 
 ### Conclusion
 
 Though I'm aware that I could have used an API or a gem for color conversions, I think it was important for the project and for myself to create a scraper to do the work. 
 
-I couldn't be happier, though, with how the project turned out and generally had a good time creating it.
+I couldn't be happier with how the project turned out and generally had a good time creating it.
 
