@@ -1,12 +1,12 @@
 ---
 layout: post
 title:      "Sinatra Portfolio Project"
-date:       2020-07-09 18:44:10 +0000
+date:       2020-07-09 14:44:12 -0400
 permalink:  sinatra_portfolio_project
 ---
 
 
-For quite some time I've been looking for a simple timer application that could keep track of how much time I've spent on daily tasks. Something that required no more than a button click to start and stop and was quick and easy to see the progress. It seemed like a good candidate for this project and I proceeded to get in over my head.
+For quite some time I've been looking for a simple application that could keep track of how much time I've spent on daily tasks. Something that required no more than a button click to start and stop and was quick and easy to see the progress. It seemed like a good candidate for this project and I proceeded to get in over my head.
 
 In order for this to work the timers needed to keep track of total time in seconds, time remaining, time started, and current state (playing or paused). Every time the play button is pressed I needed to update the state and subtract the current time from the time started to update time remaining, then set time started to the current time. This worked okay in theory, but it took me more time than I'd like to admit to get this working in practice. After realizing that I also had to do these calculations every time the page was loaded and inserting it into `get '/'` I was off to the races.
 
